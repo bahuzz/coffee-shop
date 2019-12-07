@@ -17,6 +17,13 @@ export default class GetService {
         return coffee;
     }
 
+    getItem = async (id) => {
+        const itemId = id.slice(1);
+        const item = await this.getResource(`coffee`)
+            .then(res => res.filter(prod => (prod.name === itemId)));
+        return item
+    }
+
     getBest = async () => {
         const best = await this.getResource(`bestsellers`);
         return best;

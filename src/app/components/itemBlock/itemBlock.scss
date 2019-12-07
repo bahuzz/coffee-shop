@@ -1,0 +1,16 @@
+.point {
+    margin-top: 16px;
+    span {
+        font-weight: bold;
+        margin-right: 5px;
+    }
+    &__price {
+        font-size: 24px;
+        font-weight: normal !important;     
+    }
+    &:first-child {
+        margin-top: 26px;
+    }
+}
+        
+        

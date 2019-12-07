@@ -1,22 +1,16 @@
 import React from 'react';
 import ShopItem from '../shop-item/shop-item';
 import './shop.scss';
-import nextId from "react-id-generator";
+import {Link} from 'react-router-dom';
 
 const Shop = (props) => {
     const {coffee} = props;
-    let shopList = coffee.map(item => {
-        const {name,country,description,price,url} = item;
-        let id = nextId();
+    let shopList = coffee.map((item,index) => {
+        const {name} = item;
         return(
-            <ShopItem 
-                key={id}
-                name={name}
-                url={url}
-                price={price}
-                country={country}
-                description={description}
-            />
+            <Link key={index} to={`/coffee/:${name}`}>
+                <ShopItem {...item} />
+            </Link>
         )
     });
     return(

@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Main from './components/pages/main/main';
 import Coffee from './components/pages/coffee/coffee';
 import Pleasure from './components/pages/pleasure/pleasure';
+import itemPage from './components/itemPage/itemPage';
 
 
 export default class App extends Component {
@@ -13,7 +14,8 @@ export default class App extends Component {
         return (
             <Router>
                 <Route path='/' exact component={Main}/>
-                <Route path='/coffee' component={Coffee}/>
+                <Route path='/coffee' exact component={Coffee}/>
+                <Route path='/coffee/:id' component={itemPage}/>
                 <Route path='/pleasure' component={Pleasure}/>
             </Router>
         )
