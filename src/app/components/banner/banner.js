@@ -1,21 +1,20 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Header from '../header/header';
 import './banner.sass';
 
-export default class Banner extends Component {
-
-    render() {
-        return (
-            <div class="banner">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <Header/>
-                        </div>
+const Banner = ({title}) => {
+    return (
+        <div className="banner">
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-6">
+                        <Header/>
                     </div>
-                    <h1 class="title-big">Our Coffee</h1>
                 </div>
+                <h1 className="title-big">{title}</h1>
             </div>
-        )
-    }
-}
+        </div>
+    )
+};
+
+export default Banner;

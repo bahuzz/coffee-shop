@@ -4,13 +4,14 @@ import './product.sass';
 export default class Product extends Component {
 
     render() {
+        const {name, url, price} = this.props;
         return (
-            <div class="product">
-                <img src="https://www.sciencenews.org/sites/default/files/main/articles/100315_coffee_opener_NEW_0.jpg" alt="coffee"></img>
-                <div class="product__title">
-                    Solimo Coffee Beans 2kg
+            <div className="product">
+                <img src={url} alt="coffee"></img>
+                <div className="product__title">
+                    {name}
                 </div>
-                <div class="product__price">10.73$</div>
+                <div className="product__price">{price}</div>
             </div>
         )
     }

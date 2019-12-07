@@ -5,13 +5,13 @@ export default class About extends Component {
 
     render() {
         return (
-            <section class="about">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 offset-lg-3">
-                            <div class="title">About Us</div>
-                            <img class="beanslogo" src={logoDark} alt="Beans logo"></img>
-                            <div class="about__text">
+            <section className="about">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6 offset-lg-3">
+                            <div className="title">About Us</div>
+                            <img className="beanslogo" src={logoDark} alt="Beans logo"></img>
+                            <div className="about__text">
                                 Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
                                 Afraid at highly months do things on at. Situation recommend objection do intention
                                 so questions. As greatly removed calling pleased improve an. Last ask him cold feel
