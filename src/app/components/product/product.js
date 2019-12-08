@@ -6,7 +6,7 @@ export default class Product extends Component {
     render() {
         const {name, url, price} = this.props;
         return (
-            <div className="product">
+            <div>
                 <img src={url} alt="coffee"></img>
                 <div className="product__title">
                     {name}

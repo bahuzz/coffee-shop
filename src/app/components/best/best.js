@@ -1,22 +1,22 @@
 import React, {Component} from 'react';
 import Product from '../product/product'
 import './best.sass';
-import nextId from "react-id-generator";
+import {Link} from 'react-router-dom';
 
 export default class Best extends Component {
 
     render() {
         const {items} = this.props;
-        let products = items.map(product => {
+        let products = items.map((product,index) => {
             const {name, url, price} = product;
-            const id = nextId();
             return (
-                <Product
-                    key={id}
-                    name={name}
-                    url={url}
-                    price={price}
-                />
+                <Link key={index} to={`/bestsellers/:${name}`} className="product">
+                    <Product
+                        name={name}
+                        url={url}
+                        price={price}
+                    />
+                </Link>
             )
         });
         return (
