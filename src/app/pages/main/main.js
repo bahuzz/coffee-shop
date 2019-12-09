@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import Preview from '../../preview/preview';
-import About from '../../about/about';
-import Best from '../../best/best';
-import Footer from '../../footer/footer';
+import Preview from '../../components/preview/preview';
+import About from '../../components/about/about';
+import Best from '../../components/best/best';
+import Footer from '../../components/footer/footer';
 import './main.sass';
-import GetService from '../../../services/getService'
+import GetService from '../../services/getService';
 
 export default class Main extends Component {
     constructor() {

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import Banner from '../banner/banner';
-import Footer from '../footer/footer';
-import ItemBlock from '../itemBlock/itemBlock';
+import Banner from '../../components/banner/banner';
+import Footer from '../../components/footer/footer';
+import ItemBlock from '../../components/itemBlock/itemBlock';
 import GetService from '../../services/getService';
 // import './coffee-page.sass';
 

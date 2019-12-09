@@ -1,19 +1,28 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './filter.sass';
 
-const Searchbar = () => {
-    return(
-        <div className="filter">
-            <div className="filter__label">
-                Or filter
+export default class Searchbar extends Component {
+    render() {
+        return(
+            <div className="filter">
+                <div className="filter__label">
+                    Or filter
+                </div>
+                <div className="filter__group">
+                    <button 
+                        className="filter__btn"
+                        onClick={() => this.props.onFilterChange('Brazil')}
+                        >Brazil</button>
+                    <button 
+                        className="filter__btn"
+                        onClick={() => this.props.onFilterChange('Kenya')}
+                        >Kenya</button>
+                    <button 
+                        className="filter__btn"
+                        onClick={() => this.props.onFilterChange('Columbia')}
+                        >Columbia</button>
+                </div>
             </div>
-            <div className="filter__group">
-                <button className="filter__btn">Brazil</button>
-                <button className="filter__btn">Kenya</button>
-                <button className="filter__btn">Columbia</button>
-            </div>
-        </div>
-    )
+        )
+    }
 };
-
-export default Searchbar;

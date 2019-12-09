@@ -2,9 +2,10 @@ import React from 'react';
 import Header from '../header/header';
 import './banner.sass';
 
-const Banner = ({title}) => {
+const Banner = ({title,pleasure}) => {
+    const bannerClass = (pleasure) ? 'banner pleasure' : 'banner';
     return (
-        <div className="banner">
+        <div className={bannerClass}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6">

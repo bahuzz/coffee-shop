@@ -28,5 +28,10 @@ export default class GetService {
         const best = await this.getResource(`bestsellers`);
         return best;
     }
+
+    getGoods = async () => {
+        const best = await this.getResource(`goods`);
+        return best;
+    }
 }
 

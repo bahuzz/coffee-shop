@@ -1,16 +1,12 @@
 import React from 'react';
 import ShopItem from '../shop-item/shop-item';
-import './shop.scss';
-import {Link} from 'react-router-dom';
+import './goods.scss';
 
 const Shop = (props) => {
     const {items} = props;
     let shopList = items.map((item,index) => {
-        const {name} = item;
         return(
-            <Link key={index} to={`/coffee/:${name}`}>
-                <ShopItem {...item} />
-            </Link>
+            <ShopItem key={index} {...item} />
         )
     });
     return(
@@ -25,7 +21,6 @@ const Shop = (props) => {
                 </div>
             </div>
         </div>
-        
     )
 };
 

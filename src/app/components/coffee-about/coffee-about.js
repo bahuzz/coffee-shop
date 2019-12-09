@@ -2,16 +2,16 @@ import React from 'react';
 import './coffee-about.sass';
 import logoDark from './Beans_logo_dark.svg';
 
-const CoffeeAbout = () => {
+const CoffeeAbout = ({title,img}) => {
     return(
         <section className="c-about">
             <div className="container">
                 <div className="row">
                         <div className="col-lg-4 offset-2">
-                            <img className="c-about__img" src="img/coffee_girl.jpg" alt="girl"></img>
+                            <img className="c-about__img" src={img} alt={title}></img>
                         </div>
                         <div className="col-lg-4">
-                            <div className="title">About our beans</div>
+                            <div className="title">{title}</div>
                             <img className="beanslogo" src={logoDark} alt="Beans logo"></img>
                             <div className="c-about__text">
                                 Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
