@@ -13,16 +13,27 @@ export default class Coffee extends Component {
         this.state = {
             items: [],
             term: '',
-            filter: ''
+            filter: '',
+            error: false,
+            loading: true
         }
     }
 
     componentDidMount() {
         this.getService.getCoffee()
         .then(items => {
-            this.setState({items})
+            this.setState({
+                items, 
+                loading: false
+            })
         }) 
+        .catch(() => this.setState({
+            loading: false,
+            error: true
+        }))
     }
+
+    
 
     onUpdateSearch = (term) => {
         this.setState({term});
@@ -57,7 +68,7 @@ export default class Coffee extends Component {
     }
 
     render() {
-        const {items,term,filter} = this.state;
+        const {items,term,filter,error,loading} = this.state;
         const visibleItems = this.filterItems(this.searchItems(items,term),filter);
         return (
             <>
@@ -70,7 +81,11 @@ export default class Coffee extends Component {
                     onUpdateSearch = {this.onUpdateSearch} 
                     onFilterChange = {this.onFilterChange}
                     />
-                <Shop items={visibleItems}/>
+                <Shop 
+                    items={visibleItems}
+                    error={error}
+                    loading={loading}
+                    />
                 <Footer/>
             </>
         )
